@@ -1,0 +1,28 @@
+{
+  "nombreAgencia": "AURENZA Travel",
+  "colores": {
+    "primarioOscuro": "red",
+    "azulProfundo": "#0D2B3E",
+    "azulMedio": "#1E5A6E",
+    "verdeOliva": "#6A7F58",
+    "terracota": "#C4573A",
+    "dorado": "#D4AF37",
+    "grisClaro": "#D9E6EC",
+    "fondoClaro": "#F3F1EE",
+    "textoOscuro": "#37424A"
+  },
+  "tipografias": {
+    "titulo": "'Playfair Display', serif",
+    "texto": "'Poppins', sans-serif",
+    "icono": "'Montserrat', sans-serif"
+  },
+  "contacto": {
+    "email1": "aurenzatravel@gmail.com",
+    "email2": "reservas@aurenzatravel.com",
+    "telefono1": "+51 992730294",
+    "telefono2": "+51 941109262",
+    "direccion": "AV. Tupac Amaru Jr. Acomayo D1 - 6° piso",
+    "horario": "Lun - Dom: 09:00 - 19:00"
+  },
+  "whatsapp": "51992730294"
+}

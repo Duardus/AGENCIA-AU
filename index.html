@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AURENZA Travel - Experiencias exclusivas en Perú y Bolivia</title>
+  <meta name="description" content="Explora Perú y Bolivia con Aurenza Travel. Tours y paquetes exclusivos.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+  <!-- Cinta superior con contacto rápido -->
+  <div class="cinta-superior" role="banner">
+    <div class="contenedor">
+      <span>✉️ aurenzatravel@gmail.com</span>
+      <span>📞 +51 992730294</span>
+      <span>🕒 Lun-Dom 09:00-19:00</span>
+    </div>
+  </div>
+
+  <!-- Encabezado principal -->
+  <header class="encabezado" id="inicio">
+    <div class="contenedor encabezado__interno">
+      <a href="#inicio" class="logo" aria-label="Ir a inicio">
+        <span class="logo__texto">AURENZA</span>
+        <span class="logo__sub">TRAVEL</span>
+      </a>
+
+      <button class="menu__toggle" aria-expanded="false" aria-controls="menu-principal" aria-label="Abrir menú">
+        ☰
+      </button>
+
+      <nav class="menu" id="menu-principal" aria-label="Navegación principal">
+        <ul class="menu__lista">
+          <li><a href="#inicio">INICIO</a></li>
+          <li class="menu__desplegable">
+            <a href="#tours" aria-haspopup="true" aria-expanded="false">TOURS ▾</a>
+            <ul class="submenu">
+              <li><a href="#tours" data-filtro="Lima">Lima</a></li>
+              <li><a href="#tours" data-filtro="Cusco">Cusco</a></li>
+              <li><a href="#tours" data-filtro="Puno">Puno</a></li>
+              <li><a href="#tours" data-filtro="Bolivia">Bolivia</a></li>
+            </ul>
+          </li>
+          <li><a href="#paquetes">PAQUETES</a></li>
+          <li><a href="#nosotros">NOSOTROS</a></li>
+          <li><a href="#contacto">CONTÁCTANOS</a></li>
+        </ul>
+      </nav>
+
+      <div class="acciones">
+        <select id="selector-idioma" aria-label="Seleccionar idioma">
+          <option value="es">ES</option>
+          <option value="en">EN</option>
+          <option value="pt">PT</option>
+        </select>
+        <a href="#reserva" class="boton boton--primario">RESERVA AHORA</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero con slider -->
+    <section class="hero" aria-label="Presentación">
+      <div class="hero__slider" id="hero-slider">
+        <!-- Slides se insertan por JS -->
+      </div>
+      <div class="hero__contenido">
+        <h1>Explora el Perú en su forma más pura</h1>
+        <p>Experiencias diseñadas para sorprenderte. Machu Picchu, Valle Sagrado, Salar de Uyuni y más.</p>
+        <div class="hero__botones">
+          <a href="#nosotros" class="boton boton--secundario">CONÓCENOS</a>
+          <a href="#tours" class="boton boton--primario">VER TOURS</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Destinos imperdibles -->
+    <section class="seccion" id="destinos">
+      <div class="contenedor">
+        <h2 class="titulo-seccion">Destinos Imperdibles</h2>
+        <div class="grid grid--3" id="grid-destinos">
+          <!-- JS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Tours -->
+    <section class="seccion seccion--alternada" id="tours">
+      <div class="contenedor">
+        <h2 class="titulo-seccion">Tours</h2>
+        <p class="subtitulo">Viaja con confianza, explora con emoción.</p>
+        <div class="filtros" role="tablist" aria-label="Filtrar por ciudad">
+          <button class="filtro activo" data-filtro="todos">Todos</button>
+          <button class="filtro" data-filtro="Lima">Lima</button>
+          <button class="filtro" data-filtro="Cusco">Cusco</button>
+          <button class="filtro" data-filtro="Puno">Puno</button>
+          <button class="filtro" data-filtro="Bolivia">Bolivia</button>
+        </div>
+        <div class="grid grid--3" id="grid-tours"></div>
+      </div>
+    </section>
+
+    <!-- Paquetes -->
+    <section class="seccion" id="paquetes">
+      <div class="contenedor">
+        <h2 class="titulo-seccion">Paquetes Turísticos</h2>
+        <div class="grid grid--2" id="grid-paquetes"></div>
+      </div>
+    </section>
+
+    <!-- Nosotros -->
+    <section class="seccion seccion--oscura" id="nosotros">
+      <div class="contenedor contenedor--estrecho">
+        <h2 class="titulo-seccion">Nosotros</h2>
+        <h3>Conocedores del Destino</h3>
+        <p>
+          AURENZA nace de la Esencia Dorada: valor, calidez y experiencias inolvidables.
+          Diseñamos viajes exclusivos con elegancia, autenticidad cultural y conexión emocional.
+        </p>
+        <div class="beneficios">
+          <div class="beneficio"><h4>EXCLUSIVIDAD</h4><p>Experiencias únicas y personalizadas.</p></div>
+          <div class="beneficio"><h4>AUTENTICIDAD</h4><p>Conexión genuina con la cultura andina.</p></div>
+          <div class="beneficio"><h4>EXCELENCIA</h4><p>Atención impecable de principio a fin.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contacto -->
+    <section class="seccion" id="contacto">
+      <div class="contenedor grid grid--2">
+        <div>
+          <h2 class="titulo-seccion">Contáctanos</h2>
+          <p>Descubre nuevas aventuras con nosotros.</p>
+          <ul class="lista-contacto">
+            <li>✉️ aurenzatravel@gmail.com</li>
+            <li>✉️ reservas@aurenzatravel.com</li>
+            <li>📞 +51 992730294 / +51 941109262</li>
+            <li>📍 AV. Tupac Amaru Jr. Acomayo D1 - 6° piso</li>
+          </ul>
+        </div>
+        <form class="formulario" id="form-contacto">
+          <label>Fecha de viaje*
+            <input type="date" name="fecha" required>
+          </label>
+          <label>Días
+            <input type="number" name="dias" min="1" placeholder="¿Cuántos días?">
+          </label>
+          <label>Detalles del viaje*
+            <textarea name="detalles" rows="4" required placeholder="Cuéntanos qué deseas vivir..."></textarea>
+          </label>
+          <button type="submit" class="boton boton--primario">ENVIAR</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="contenedor grid grid--4">
+      <div>
+        <h4>AURENZA TRAVEL</h4>
+        <p>Experiencias exclusivas en Perú y Bolivia.</p>
+      </div>
+      <div>
+        <h5>Enlaces</h5>
+        <ul>
+          <li><a href="#tours">Tours</a></li>
+          <li><a href="#paquetes">Paquetes</a></li>
+          <li><a href="#nosotros">Nosotros</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Legal</h5>
+        <ul>
+          <li><a href="#">Términos y Condiciones</a></li>
+          <li><a href="#">Libro de Reclamaciones</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Síguenos</h5>
+        <p>Instagram • Facebook • TikTok</p>
+      </div>
+    </div>
+    <div class="footer__copy">© 2026 Aurenza Travel. Todos los derechos reservados.</div>
+  </footer>
+
+  <!-- Botón WhatsApp flotante -->
+  <a href="https://wa.me/51992730294" class="whatsapp" target="_blank" rel="noopener" aria-label="Contactar por WhatsApp">
+    💬
+  </a>
+
+  <!-- Modal detalle tour -->
+  <dialog id="modal-tour" aria-labelledby="modal-titulo">
+    <button class="modal__cerrar" aria-label="Cerrar">✕</button>
+    <div id="modal-contenido"></div>
+  </dialog>
+
+  <script src="js/app.js" type="module"></script>
+</body>
+</html>
