@@ -209,5 +209,399 @@
       "Agua",
       "Batería externa"
     ]
+  },
+  {
+    "id": "isla-palomino",
+    "ciudad": "Lima",
+    "nombre": "Isla Palomino",
+    "tipo": "Half Day",
+    "duracion": "5 horas",
+    "inicio": "08:00",
+    "dificultad": "Fácil",
+    "idiomas": [
+      "Español",
+      "Inglés"
+    ],
+    "imagen": "imagenes/isla_palomino.jpg",
+    "resumen": "Navegación desde Callao para nadar con lobos marinos.",
+    "itinerario": [
+      "Recojo del hotel",
+      "Traslado a Marina Callao",
+      "Navegación a Isla Palomino",
+      "Avistamiento de lobos marinos",
+      "Tiempo para nadar con traje neopreno",
+      "Retorno y snack"
+    ],
+    "incluye": [
+      "Transporte",
+      "Embarcación",
+      "Guía",
+      "Traje neopreno",
+      "Snack"
+    ],
+    "noIncluye": [
+      "Alimentación completa",
+      "Fotos"
+    ],
+    "recomendaciones": [
+      "Traje de baño",
+      "Toalla",
+      "Bloqueador",
+      "Gorra",
+      "Cámara acuática"
+    ]
+  },
+  {
+    "id": "paracas-huacachina",
+    "ciudad": "Lima",
+    "nombre": "Paracas - Huacachina",
+    "tipo": "Full Day",
+    "duracion": "16 horas",
+    "inicio": "04:00",
+    "dificultad": "Fácil",
+    "idiomas": [
+      "Español",
+      "Inglés",
+      "Portugués"
+    ],
+    "imagen": "imagenes/paracas.jpg",
+    "resumen": "Islas Ballestas, reserva de Paracas, oasis y tubulares.",
+    "itinerario": [
+      "Recojo madrugada",
+      "Viaje a Paracas",
+      "Tour Islas Ballestas y Candelabro",
+      "Tiempo libre en boulevard",
+      "Traslado a Ica",
+      "Oasis de Huacachina y tubulares",
+      "Sandboarding",
+      "Retorno a Lima"
+    ],
+    "incluye": [
+      "Transporte",
+      "Guía",
+      "Bote a Ballestas",
+      "Tubulares",
+      "Sandboard"
+    ],
+    "noIncluye": [
+      "Alimentación",
+      "Entradas a miradores"
+    ],
+    "recomendaciones": [
+      "Ropa ligera",
+      "Lentes sol",
+      "Bloqueador",
+      "Dinero efectivo"
+    ]
+  },
+  {
+    "id": "city-tour-cusco",
+    "ciudad": "Cusco",
+    "nombre": "City Tour en Cusco",
+    "tipo": "Half Day",
+    "duracion": "5 horas",
+    "inicio": "09:00 / 14:00",
+    "dificultad": "Fácil",
+    "idiomas": [
+      "Español",
+      "Inglés",
+      "Portugués"
+    ],
+    "imagen": "imagenes/valle_sagrado.jpg",
+    "resumen": "Qorikancha y 4 ruinas cercanas a la ciudad.",
+    "itinerario": [
+      "Recojo del hotel",
+      "Templo del Sol Qorikancha",
+      "Sacsayhuamán",
+      "Qenqo",
+      "Puka Pukara",
+      "Tambomachay"
+    ],
+    "incluye": [
+      "Transporte",
+      "Guía oficial",
+      "Entradas"
+    ],
+    "noIncluye": [
+      "Alimentación",
+      "Propinas"
+    ],
+    "recomendaciones": [
+      "Aclimatación previa",
+      "Agua",
+      "Bloqueador",
+      "Cámara"
+    ]
+  },
+  {
+    "id": "montana-colores",
+    "ciudad": "Cusco",
+    "nombre": "Montaña de Colores",
+    "tipo": "Full Day",
+    "duracion": "12 horas",
+    "inicio": "04:00",
+    "dificultad": "Moderado-Alto",
+    "idiomas": [
+      "Español",
+      "Inglés",
+      "Portugués"
+    ],
+    "imagen": "imagenes/montana_colores.jpg",
+    "resumen": "Vinicunca a 5,036 msnm con desayuno y almuerzo buffet.",
+    "itinerario": [
+      "Recojo del hotel",
+      "Desayuno en Cusipata",
+      "Inicio de caminata",
+      "Llegada a Mirador Vinicunca",
+      "Tiempo para fotos",
+      "Descenso",
+      "Almuerzo buffet",
+      "Retorno a Cusco"
+    ],
+    "incluye": [
+      "Transporte",
+      "Guía",
+      "Entradas",
+      "Desayuno",
+      "Almuerzo",
+      "Bastones",
+      "Oxígeno"
+    ],
+    "noIncluye": [
+      "Caballo",
+      "Bebidas"
+    ],
+    "recomendaciones": [
+      "Aclimatación 2 días",
+      "Ropa abrigo en capas",
+      "Zapatos trekking",
+      "Bastones",
+      "Hojas de coca"
+    ]
+  },
+  {
+    "id": "valle-sur",
+    "ciudad": "Cusco",
+    "nombre": "Valle Sur",
+    "tipo": "Half Day",
+    "duracion": "6 horas",
+    "inicio": "08:30",
+    "dificultad": "Fácil",
+    "idiomas": [
+      "Español",
+      "Inglés"
+    ],
+    "imagen": "imagenes/valle_sagrado.jpg",
+    "resumen": "Tipón, Pikillacta y Andahuaylillas.",
+    "itinerario": [
+      "Recojo del hotel",
+      "Complejo arqueológico de Tipón",
+      "Pikillacta ciudad Wari",
+      "Capilla Sixtina de Andahuaylillas",
+      "Retorno a Cusco"
+    ],
+    "incluye": [
+      "Transporte",
+      "Guía",
+      "Entradas"
+    ],
+    "noIncluye": [
+      "Alimentación"
+    ],
+    "recomendaciones": [
+      "Cámara",
+      "Bloqueador",
+      "Agua"
+    ]
+  },
+  {
+    "id": "waqrapukara",
+    "ciudad": "Cusco",
+    "nombre": "Waqrapukara",
+    "tipo": "Full Day",
+    "duracion": "14 horas",
+    "inicio": "04:00",
+    "dificultad": "Moderado",
+    "idiomas": [
+      "Español",
+      "Inglés"
+    ],
+    "imagen": "imagenes/humantay.jpg",
+    "resumen": "Fortaleza en forma de llama a 4,300 msnm.",
+    "itinerario": [
+      "Recojo del hotel",
+      "Viaje a Sangarará",
+      "Desayuno",
+      "Caminata a Waqrapukara",
+      "Visita guiada",
+      "Box lunch",
+      "Retorno a Cusco"
+    ],
+    "incluye": [
+      "Transporte",
+      "Guía",
+      "Entrada",
+      "Desayuno",
+      "Box lunch"
+    ],
+    "noIncluye": [
+      "Bastones",
+      "Propinas"
+    ],
+    "recomendaciones": [
+      "Zapatos trekking",
+      "Bastones",
+      "Poncho lluvia",
+      "Agua"
+    ]
+  },
+  {
+    "id": "ruta-mistica",
+    "ciudad": "Cusco",
+    "nombre": "Ruta Mística",
+    "tipo": "Half Day",
+    "duracion": "5 horas",
+    "inicio": "09:00 / 14:00",
+    "dificultad": "Fácil",
+    "idiomas": [
+      "Español",
+      "Inglés"
+    ],
+    "imagen": "imagenes/valle_sagrado.jpg",
+    "resumen": "Morada de los Dioses, Bosque de los Ents y Humedal.",
+    "itinerario": [
+      "Recojo del hotel",
+      "Morada de los Dioses",
+      "Bosque de los Ents",
+      "Humedal de Huasao",
+      "Valle de los Duendes",
+      "Retorno"
+    ],
+    "incluye": [
+      "Transporte",
+      "Guía",
+      "Entradas"
+    ],
+    "noIncluye": [
+      "Alimentación"
+    ],
+    "recomendaciones": [
+      "Cámara",
+      "Bloqueador",
+      "Agua"
+    ]
+  },
+  {
+    "id": "morada-dioses-cuatrimotos",
+    "ciudad": "Cusco",
+    "nombre": "Morada de los Dioses en Cuatrimotos",
+    "tipo": "Half Day",
+    "duracion": "4 horas",
+    "inicio": "09:00 / 14:00",
+    "dificultad": "Fácil",
+    "idiomas": [
+      "Español"
+    ],
+    "imagen": "imagenes/valle_sagrado.jpg",
+    "resumen": "Aventura en cuatrimoto a esculturas gigantes.",
+    "itinerario": [
+      "Recojo del hotel",
+      "Instrucción de manejo",
+      "Ruta en cuatrimoto",
+      "Morada de los Dioses",
+      "Retorno"
+    ],
+    "incluye": [
+      "Transporte",
+      "Cuatrimoto",
+      "Guía",
+      "Casco",
+      "Entradas"
+    ],
+    "noIncluye": [
+      "Alimentación"
+    ],
+    "recomendaciones": [
+      "Licencia conducir",
+      "Lentes",
+      "Bandana",
+      "Ropa que se pueda ensuciar"
+    ]
+  },
+  {
+    "id": "uros-taquile",
+    "ciudad": "Puno",
+    "nombre": "Uros - Taquile",
+    "tipo": "Full Day",
+    "duracion": "8 horas",
+    "inicio": "07:00",
+    "dificultad": "Fácil",
+    "idiomas": [
+      "Español",
+      "Inglés"
+    ],
+    "imagen": "imagenes/uros_taquile.jpg",
+    "resumen": "Islas flotantes de los Uros y cultura textil de Taquile.",
+    "itinerario": [
+      "Traslado al puerto",
+      "Navegación a Islas Uros",
+      "Visita y paseo en balsa",
+      "Navegación a Taquile",
+      "Caminata y almuerzo típico",
+      "Retorno a Puno"
+    ],
+    "incluye": [
+      "Bote",
+      "Guía",
+      "Entradas",
+      "Almuerzo"
+    ],
+    "noIncluye": [
+      "Paseo en balsa de totora opcional"
+    ],
+    "recomendaciones": [
+      "Ropa abrigo",
+      "Bloqueador",
+      "Gorra",
+      "Dinero efectivo"
+    ]
+  },
+  {
+    "id": "tiahuanaco",
+    "ciudad": "Bolivia",
+    "nombre": "Tiahuanaco",
+    "tipo": "Full Day",
+    "duracion": "10 horas",
+    "inicio": "07:00",
+    "dificultad": "Fácil",
+    "idiomas": [
+      "Español"
+    ],
+    "imagen": "imagenes/salar_uyuni.jpg",
+    "resumen": "Sitio arqueológico preinca desde Puno.",
+    "itinerario": [
+      "Recojo en Puno",
+      "Cruce frontera Desaguadero",
+      "Llegada a Tiahuanaco",
+      "Templo de Kalasasaya",
+      "Puerta del Sol",
+      "Museo lítico",
+      "Almuerzo",
+      "Retorno a Puno"
+    ],
+    "incluye": [
+      "Transporte",
+      "Guía",
+      "Entradas",
+      "Almuerzo"
+    ],
+    "noIncluye": [
+      "Gastos frontera"
+    ],
+    "recomendaciones": [
+      "Pasaporte",
+      "Ropa abrigo",
+      "Bloqueador"
+    ]
   }
 ]
