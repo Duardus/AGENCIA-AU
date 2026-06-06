@@ -1,19 +1,17 @@
 /* ========================================
    AURENZA TRAVEL - Lógica principal
-   Arquitectura Jason-driven + i18n
+   Arquitectura Jason-driven
+   Todo el contenido viene de /datos/*.json
    ======================================== */
 
-// Estado global
+// Estado global de la aplicación
 const estado = {
   tours: [],
   paquetes: [],
-  config: null,
-  traducciones: {},
-  idioma: localStorage.getItem('aurenza_idioma') || 'es',
   filtroActual: 'todos'
 };
 
-// Utilidad
+// Utilidad: crear elemento con clases
 function crearElemento(etiqueta, clases = '', texto = '') {
   const el = document.createElement(etiqueta);
   if (clases) el.className = clases;
@@ -21,33 +19,23 @@ function crearElemento(etiqueta, clases = '', texto = '') {
   return el;
 }
 
-function t(clave) {
-  return estado.traducciones[estado.idioma]?.[clave] || clave;
-}
-
-// Cargar datos
+// Cargar datos JSON
 async function cargarDatos() {
   try {
-    const [toursRes, paquetesRes, configRes] = await Promise.all([
+    const [toursRes, paquetesRes] = await Promise.all([
       fetch('datos/tours.json'),
-      fetch('datos/paquetes.json'),
-      fetch('datos/config.json')
+      fetch('datos/paquetes.json')
     ]);
     estado.tours = await toursRes.json();
     estado.paquetes = await paquetesRes.json();
-    estado.config = await configRes.json();
-    estado.traducciones = estado.config.i18n || {};
     inicializar();
   } catch (error) {
     console.error('Error cargando datos:', error);
   }
 }
 
+// Inicializar componentes
 function inicializar() {
-  document.documentElement.lang = estado.idioma;
-  const selector = document.getElementById('selector-idioma');
-  if (selector) selector.value = estado.idioma;
-  aplicarIdioma();
   renderizarHero();
   renderizarDestinos();
   renderizarTours();
@@ -56,35 +44,11 @@ function inicializar() {
   configurarFiltros();
   configurarModal();
   configurarFormulario();
-  configurarIdioma();
 }
 
-function aplicarIdioma() {
-  document.querySelectorAll('[data-i18n]').forEach(el => {
-    const clave = el.dataset.i18n;
-    const txt = t(clave);
-    if (txt) el.textContent = txt;
-  });
-}
-
-function configurarIdioma() {
-  const selector = document.getElementById('selector-idioma');
-  if (!selector) return;
-  selector.addEventListener('change', (e) => {
-    estado.idioma = e.target.value;
-    localStorage.setItem('aurenza_idioma', estado.idioma);
-    document.documentElement.lang = estado.idioma;
-    aplicarIdioma();
-    renderizarDestinos();
-    renderizarTours();
-    renderizarPaquetes();
-  });
-}
-
-// Hero
+// Hero slider
 function renderizarHero() {
   const slider = document.getElementById('hero-slider');
-  slider.innerHTML = '';
   const imagenes = [
     'imagenes/machu_picchu.jpg',
     'imagenes/valle_sagrado.jpg',
@@ -97,6 +61,7 @@ function renderizarHero() {
     slide.style.backgroundImage = `url(${src})`;
     slider.appendChild(slide);
   });
+  // Rotación automática
   let indice = 0;
   setInterval(() => {
     const slides = slider.querySelectorAll('.hero__slide');
@@ -106,12 +71,11 @@ function renderizarHero() {
   }, 6000);
 }
 
-// Destinos
+// Destinos imperdibles
 function renderizarDestinos() {
   const contenedor = document.getElementById('grid-destinos');
-  contenedor.innerHTML = '';
   const destinos = [
-    { nombre: 'Uros - Taquile', imagen: 'imagenes/uros_taquile.jpg' },
+    { nombre: 'Uros - Taquile', imagen: 'imagenes/humantay.jpg' },
     { nombre: 'Salar de Uyuni', imagen: 'imagenes/salar_uyuni.jpg' },
     { nombre: 'Valle Sagrado VIP', imagen: 'imagenes/valle_sagrado.jpg' }
   ];
@@ -121,14 +85,14 @@ function renderizarDestinos() {
       <img src="${d.imagen}" alt="${d.nombre}" class="tarjeta__imagen" loading="lazy">
       <div class="tarjeta__cuerpo">
         <h3 class="tarjeta__titulo">${d.nombre}</h3>
-        <a href="#tours" class="boton boton--secundario">${t('btn_ver_mas')}</a>
+        <a href="#tours" class="boton boton--secundario">VER MÁS</a>
       </div>
     `;
     contenedor.appendChild(tarjeta);
   });
 }
 
-// Tours
+// Renderizar tours con filtro
 function renderizarTours() {
   const contenedor = document.getElementById('grid-tours');
   contenedor.innerHTML = '';
@@ -138,24 +102,29 @@ function renderizarTours() {
   
   lista.forEach(tour => {
     const tarjeta = crearElemento('article', 'tarjeta');
+    tarjeta.tabIndex = 0;
+    tarjeta.setAttribute('role', 'button');
+    tarjeta.setAttribute('aria-label', `Ver detalles de ${tour.nombre}`);
     tarjeta.innerHTML = `
       <img src="${tour.imagen}" alt="${tour.nombre}" class="tarjeta__imagen" loading="lazy">
       <div class="tarjeta__cuerpo">
         <h3 class="tarjeta__titulo">${tour.nombre}</h3>
         <p class="tarjeta__meta">${tour.ciudad} • ${tour.tipo} • ${tour.duracion}</p>
         <p>${tour.resumen}</p>
-        <button class="boton boton--primario" data-id="${tour.id}">${t('btn_detalles')}</button>
+        <button class="boton boton--primario" data-id="${tour.id}">VER DETALLE</button>
       </div>
     `;
     tarjeta.querySelector('button').addEventListener('click', () => abrirModalTour(tour.id));
+    tarjeta.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter') abrirModalTour(tour.id);
+    });
     contenedor.appendChild(tarjeta);
   });
 }
 
-// Paquetes
+// Renderizar paquetes
 function renderizarPaquetes() {
   const contenedor = document.getElementById('grid-paquetes');
-  contenedor.innerHTML = '';
   estado.paquetes.forEach(p => {
     const tarjeta = crearElemento('article', 'tarjeta');
     tarjeta.innerHTML = `
@@ -164,7 +133,7 @@ function renderizarPaquetes() {
         <h3 class="tarjeta__titulo">${p.nombre}</h3>
         <p class="tarjeta__meta">${p.duracion}</p>
         <p>${p.resumen}</p>
-        <button class="boton boton--primario" data-id="${p.id}">${t('btn_cotizar')}</button>
+        <button class="boton boton--secundario" data-id="${p.id}">VER ITINERARIO</button>
       </div>
     `;
     tarjeta.querySelector('button').addEventListener('click', () => abrirModalPaquete(p.id));
@@ -172,7 +141,7 @@ function renderizarPaquetes() {
   });
 }
 
-// Menu
+// Configurar menú responsive
 function configurarMenu() {
   const toggle = document.querySelector('.menu__toggle');
   const menu = document.getElementById('menu-principal');
@@ -180,19 +149,13 @@ function configurarMenu() {
     const abierto = menu.classList.toggle('abierto');
     toggle.setAttribute('aria-expanded', abierto);
   });
-  document.querySelectorAll('[data-filtro]').forEach(link => {
-    link.addEventListener('click', (e) => {
-      estado.filtroActual = e.target.dataset.filtro;
-      document.querySelectorAll('.filtro').forEach(b => {
-        b.classList.toggle('activo', b.dataset.filtro === estado.filtroActual);
-      });
-      renderizarTours();
-      document.getElementById('tours').scrollIntoView({ behavior: 'smooth' });
-    });
+  // Cerrar al hacer click en enlace
+  menu.querySelectorAll('a').forEach(a => {
+    a.addEventListener('click', () => menu.classList.remove('abierto'));
   });
 }
 
-// Filtros
+// Filtros de tours
 function configurarFiltros() {
   document.querySelectorAll('.filtro').forEach(btn => {
     btn.addEventListener('click', () => {
@@ -200,6 +163,19 @@ function configurarFiltros() {
       btn.classList.add('activo');
       estado.filtroActual = btn.dataset.filtro;
       renderizarTours();
+    });
+  });
+  // Submenu rápido
+  document.querySelectorAll('.submenu a').forEach(a => {
+    a.addEventListener('click', (e) => {
+      const filtro = a.dataset.filtro;
+      if (filtro) {
+        estado.filtroActual = filtro;
+        document.querySelectorAll('.filtro').forEach(b => {
+          b.classList.toggle('activo', b.dataset.filtro === filtro);
+        });
+        setTimeout(renderizarTours, 100);
+      }
     });
   });
 }
@@ -223,9 +199,9 @@ function abrirModalTour(id) {
     <h2 id="modal-titulo" style="font-family:var(--fuente-titulo)">${tour.nombre}</h2>
     <p><strong>${tour.ciudad}</strong> • ${tour.tipo} • ${tour.duracion}</p>
     <div class="tabs" role="tablist">
-      <button class="tab activo" data-tab="itinerario">${t('tab_itinerario')}</button>
-      <button class="tab" data-tab="incluye">${t('tab_incluye')}</button>
-      <button class="tab" data-tab="recomendaciones">${t('tab_llevar')}</button>
+      <button class="tab activo" data-tab="itinerario">Itinerario</button>
+      <button class="tab" data-tab="incluye">Incluye</button>
+      <button class="tab" data-tab="recomendaciones">Qué llevar</button>
     </div>
     <div id="tab-contenido"></div>
   `;
@@ -237,7 +213,7 @@ function abrirModalTour(id) {
       contenido.innerHTML = '<ol>' + tour.itinerario.map(p => `<li>${p}</li>`).join('') + '</ol>';
     } else if (tab === 'incluye') {
       contenido.innerHTML = `
-        <h4>${t('tab_incluye')}</h4>
+        <h4>Incluye</h4>
         <ul>${tour.incluye.map(i => `<li>✓ ${i}</li>`).join('')}</ul>
         <h4 style="margin-top:1rem">No incluye</h4>
         <ul>${tour.noIncluye.map(i => `<li>✗ ${i}</li>`).join('')}</ul>
@@ -260,9 +236,9 @@ function abrirModalPaquete(id) {
     <img src="${p.imagen}" alt="${p.nombre}" style="width:100%;border-radius:12px;margin-bottom:1rem;">
     <h2 id="modal-titulo" style="font-family:var(--fuente-titulo)">${p.nombre}</h2>
     <p>${p.duracion}</p>
-    <h4>${t('tab_itinerario')}</h4>
+    <h4>Itinerario</h4>
     <ol>${p.itinerario.map(i => `<li>${i}</li>`).join('')}</ol>
-    <h4>${t('tab_incluye')}</h4>
+    <h4>Incluye</h4>
     <ul>${p.incluye.map(i => `<li>✓ ${i}</li>`).join('')}</ul>
   `;
   modal.showModal();
@@ -279,9 +255,10 @@ function configurarFormulario() {
   });
 }
 
-// Iniciar
+// Iniciar carga
 cargarDatos();
 
+// Accesibilidad: cerrar modal con Escape
 document.addEventListener('keydown', (e) => {
   if (e.key === 'Escape') {
     document.getElementById('modal-tour').close();

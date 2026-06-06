@@ -1,0 +1,52 @@
+[
+  {
+    "id": "esencia-inca",
+    "nombre": "Esencia Inca 4D/3N",
+    "duracion": "4 días / 3 noches",
+    "imagen": "imagenes/machu_picchu.jpg",
+    "resumen": "City Tour, Valle Sagrado VIP y Machu Picchu.",
+    "itinerario": [
+      "Día 1: Llegada + City Tour Cusco",
+      "Día 2: Valle Sagrado VIP",
+      "Día 3: Machu Picchu Full Day",
+      "Día 4: Traslado aeropuerto"
+    ],
+    "incluye": [
+      "Traslados",
+      "3 noches hotel",
+      "Desayunos",
+      "Tours mencionados",
+      "Tren y bus"
+    ],
+    "noIncluye": [
+      "Alimentación no mencionada",
+      "Seguro",
+      "Propinas"
+    ]
+  },
+  {
+    "id": "ruta-sagrada",
+    "nombre": "Ruta Sagrada 6D/5N",
+    "duracion": "6 días / 5 noches",
+    "imagen": "imagenes/valle_sagrado.jpg",
+    "resumen": "Incluye Humantay y Montaña de Colores.",
+    "itinerario": [
+      "Día 1: City Tour",
+      "Día 2: Valle Sagrado",
+      "Día 3: Machu Picchu",
+      "Día 4: Laguna Humantay",
+      "Día 5: Montaña Colores",
+      "Día 6: Salida"
+    ],
+    "incluye": [
+      "5 noches hotel",
+      "Todos los tours",
+      "Entradas",
+      "Almuerzos en tours"
+    ],
+    "noIncluye": [
+      "Vuelos",
+      "Seguro"
+    ]
+  }
+]

@@ -1,0 +1,213 @@
+[
+  {
+    "id": "city-tour-lima",
+    "ciudad": "Lima",
+    "nombre": "City Tour en Lima",
+    "tipo": "Half Day",
+    "duracion": "5 horas",
+    "inicio": "09:00 / 14:00",
+    "dificultad": "Fácil",
+    "idiomas": [
+      "Español",
+      "Inglés",
+      "Portugués"
+    ],
+    "imagen": "imagenes/paracas.jpg",
+    "resumen": "Recorrido por el Centro Histórico, Huaca Pucllana y Lima moderna.",
+    "itinerario": [
+      "Recojo del hotel en Miraflores",
+      "Vista panorámica Huaca Pucllana",
+      "Centro Histórico de Lima y Plaza Mayor",
+      "Museo Banco Central de Reserva",
+      "Convento San Francisco y Catacumbas",
+      "Lima moderna: Parque del Amor y Larcomar"
+    ],
+    "incluye": [
+      "Recojo y retorno",
+      "Transporte",
+      "Guía oficial",
+      "Entradas mencionadas",
+      "Asistencia"
+    ],
+    "noIncluye": [
+      "Alimentación",
+      "Gastos personales",
+      "Propinas"
+    ],
+    "recomendaciones": [
+      "Ropa cómoda",
+      "Lentes de sol",
+      "Bloqueador",
+      "Gorra",
+      "Agua"
+    ]
+  },
+  {
+    "id": "valle-sagrado-vip",
+    "ciudad": "Cusco",
+    "nombre": "Valle Sagrado VIP",
+    "tipo": "Full Day",
+    "duracion": "12 horas",
+    "inicio": "06:30",
+    "dificultad": "Fácil",
+    "idiomas": [
+      "Español",
+      "Inglés",
+      "Portugués"
+    ],
+    "imagen": "imagenes/valle_sagrado.jpg",
+    "resumen": "Chinchero, Moray, Maras, Urubamba, Ollantaytambo y Pisac.",
+    "itinerario": [
+      "Recojo del hotel",
+      "Chinchero y centro textil",
+      "Moray andenes circulares",
+      "Salineras de Maras",
+      "Almuerzo buffet en Urubamba",
+      "Ollantaytambo",
+      "Pisac",
+      "Retorno a Cusco"
+    ],
+    "incluye": [
+      "Transporte",
+      "Guía",
+      "Entradas",
+      "Almuerzo buffet",
+      "Asistencia"
+    ],
+    "noIncluye": [
+      "Bebidas",
+      "Gastos personales"
+    ],
+    "recomendaciones": [
+      "Documento identidad",
+      "Ropa cómoda",
+      "Casaca cortaviento",
+      "Bloqueador",
+      "Agua"
+    ]
+  },
+  {
+    "id": "machu-picchu",
+    "ciudad": "Cusco",
+    "nombre": "Machu Picchu Full Day",
+    "tipo": "Full Day",
+    "duracion": "14-16 horas",
+    "inicio": "03:30",
+    "dificultad": "Fácil",
+    "idiomas": [
+      "Español",
+      "Inglés",
+      "Portugués"
+    ],
+    "imagen": "imagenes/machu_picchu.jpg",
+    "resumen": "Viaje en tren y visita guiada a la ciudadela inca.",
+    "itinerario": [
+      "Recojo y traslado a estación",
+      "Viaje en tren a Aguas Calientes",
+      "Bus a Machu Picchu",
+      "Visita guiada",
+      "Tiempo libre",
+      "Retorno a Cusco"
+    ],
+    "incluye": [
+      "Recojo",
+      "Tren ida/vuelta",
+      "Bus Consettur",
+      "Entrada",
+      "Guía"
+    ],
+    "noIncluye": [
+      "Alimentación",
+      "Gastos personales"
+    ],
+    "recomendaciones": [
+      "Pasaporte",
+      "Ropa ligera",
+      "Poncho lluvia",
+      "Repelente",
+      "Agua"
+    ]
+  },
+  {
+    "id": "laguna-humantay",
+    "ciudad": "Cusco",
+    "nombre": "Laguna Humantay",
+    "tipo": "Full Day",
+    "duracion": "12-14 horas",
+    "inicio": "04:00",
+    "dificultad": "Moderado",
+    "idiomas": [
+      "Español",
+      "Inglés",
+      "Portugués"
+    ],
+    "imagen": "imagenes/humantay.jpg",
+    "resumen": "Laguna turquesa a 4,200 msnm con desayuno y almuerzo.",
+    "itinerario": [
+      "Recojo del hotel",
+      "Desayuno en Mollepata",
+      "Caminata a Laguna Humantay",
+      "Tiempo libre y fotos",
+      "Descenso y almuerzo",
+      "Retorno a Cusco"
+    ],
+    "incluye": [
+      "Transporte",
+      "Guía",
+      "Entrada",
+      "Desayuno",
+      "Almuerzo"
+    ],
+    "noIncluye": [
+      "Caballo",
+      "Bebidas",
+      "Propinas"
+    ],
+    "recomendaciones": [
+      "Aclimatación",
+      "Ropa abrigo",
+      "Zapatos trekking",
+      "Bloqueador",
+      "Coca"
+    ]
+  },
+  {
+    "id": "salar-uyuni",
+    "ciudad": "Bolivia",
+    "nombre": "Salar de Uyuni",
+    "tipo": "Full Day",
+    "duracion": "8-10 horas",
+    "inicio": "10:00",
+    "dificultad": "Fácil",
+    "idiomas": [
+      "Español"
+    ],
+    "imagen": "imagenes/salar_uyuni.jpg",
+    "resumen": "Cementerio de trenes, Colchani y atardecer en el salar.",
+    "itinerario": [
+      "Cementerio de Trenes",
+      "Colchani y artesanías",
+      "Ingreso al Salar",
+      "Almuerzo",
+      "Atardecer",
+      "Retorno a Uyuni"
+    ],
+    "incluye": [
+      "Transporte 4x4",
+      "Guía conductor",
+      "Almuerzo",
+      "Botiquín"
+    ],
+    "noIncluye": [
+      "Entrada Isla Incahuasi",
+      "Bebidas"
+    ],
+    "recomendaciones": [
+      "Ropa abrigo",
+      "Lentes sol",
+      "Bloqueador",
+      "Agua",
+      "Batería externa"
+    ]
+  }
+]
